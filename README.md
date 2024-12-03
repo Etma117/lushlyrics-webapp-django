@@ -31,3 +31,35 @@ Once `pip` has finished downloading the dependencies:
 (env)$ python manage.py runserver
 ```
 And navigate to `http://127.0.0.1:8000/`.
+
+# Project Features
+
+This project includes the following main features:
+
+## Mainpage
+The main page of the application displays a list of plans available, buttoms for login and sign up
+
+![Mainpage](screenshots/Mainpage1.png)
+![Mainpage](screenshots/Mainpage2.png)
+
+## Login
+The login functionality uses Django Allauth to handle user access.
+
+![Login](screenshots/Login.png)
+
+## User Registration
+New users can register using their email address.
+
+![Registration](screenshots/SignUp.png)
+
+## Password Recovery
+Functionality to recover forgotten passwords with automated email delivery.
+
+![Password Recovery](screenshots/PasswordRecovery.png)
+![Password Recovery](screenshots/MailPasswordRecovery.png)
+
+## Email Account Confirmation
+The system uses Django Allauth to confirm accounts through a link sent via email.
+
+![Email Confirmation](docs/screenshots/confirm-email.png)
+

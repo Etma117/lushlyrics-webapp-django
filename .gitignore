@@ -1,0 +1,5 @@
+# Ignorar entorno virtual
+/env
+
+# Ignorar el archivo ".prettierignore"
+.prettierignore

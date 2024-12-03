@@ -1,0 +1,208 @@
+/*Global Styles*/
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #121212, #178a3f);
+  overflow-x: hidden; /* Solo evita el desplazamiento horizontal */
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+.header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+.header .logo {
+  line-height: 1;
+}
+
+.header .logo img {
+  max-height: 32px;
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.scrolled .header {
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Animated Background */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://source.unsplash.com/1600x900/?music") no-repeat
+    center/cover;
+  filter: blur(8px) brightness(0.5);
+  z-index: -1;
+  animation: pulse 6s infinite alternate;
+}
+
+.bg-dark{
+  background-color: #121212;
+}
+
+@keyframes pulse {
+  0% {
+    filter: blur(8px) brightness(0.5);
+  }
+  100% {
+    filter: blur(5px) brightness(0.7);
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Content Wrapper */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main-content h1 {
+  font-size: 3rem;
+  margin: 0 0 15px 0;
+  background: linear-gradient(to right, #d4d4d4, #178a3f);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: slide-in 1.5s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  line-height: 1.6;
+  animation: fade-in 2s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 5px;
+}
+
+.btn-primary {
+  background: #2e2e2e;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #1db954, #2ac1d1);
+}
+
+/* Card Style Elements */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  margin: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  animation: fade-in-card 2s ease-out;
+}
+
+@keyframes fade-in-card {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #c8f6e0;
+}
+
+.card-title{  
+  color: #c8f6e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .btn-group {
+    flex-direction: column;
+  }
+}

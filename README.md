@@ -1,5 +1,5 @@
-
-
+This repository is a copy of: https://github.com/mohammedwed/lushlyrics-webapp-django.git
+Given the change in structure, create a new repository to avoid conflicts with git and not create a new .zip
 
 ## Setup
 
@@ -30,4 +30,4 @@ Once `pip` has finished downloading the dependencies:
 (env)$ cd spotify-clone-django
 (env)$ python manage.py runserver
 ```
-And navigate to `http://127.0.0.1:8000/demo`.
+And navigate to `http://127.0.0.1:8000/`.

@@ -61,5 +61,5 @@ Functionality to recover forgotten passwords with automated email delivery.
 ## Email Account Confirmation
 The system uses Django Allauth to confirm accounts through a link sent via email.
 
-![Email Confirmation](docs/screenshots/confirm-email.png)
+![Email Confirmation](screenshots/MailConfirm.png)
 
